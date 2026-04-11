@@ -1,0 +1,23 @@
+[project]
+name = "reqtotest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "databricks-langchain",
+    "jsonpatch",
+    "langchain",
+    "langchain-chroma",
+    "langchain-community",
+    "langchain-core",
+    "langchain-huggingface",
+    "openai",
+    "openpyxl",
+    "pandas",
+    "pydantic",
+    "sentence-transformers",
+    "streamlit>=1.56.0",
+    "xlrd",
+    "xlsxwriter",
+]

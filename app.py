@@ -32,7 +32,7 @@ if "validated_id" not in st.session_state:
 
 # Step 3 — Input 1 upload
 old_file = st.file_uploader(
-    "Upload Old Requirements (Excel only)",
+    "Upload Old Requirements (only 1 Excel file)",
     type=["xlsx", "xls"],
     accept_multiple_files=False,
     key="inp1"
@@ -63,7 +63,7 @@ if st.session_state.old_db is None:
     st.stop()
 #Step5:Input2
 new_file = st.file_uploader(
-    "Upload New Requirements (Excel only)",
+    "Upload New Requirements (only 1 Excel file)",
     type=["xlsx", "xls"],
     accept_multiple_files=False,
     key="inp2"

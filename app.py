@@ -152,6 +152,7 @@ from Retriever.similarity_executor import execute_similarity_for_row
 # --- Page Configuration ---
 st.set_page_config(page_title="Similarity Detector Pro", layout="wide")
 
+
 # --- Session State Initialization ---
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
@@ -162,6 +163,8 @@ if "db_ready" not in st.session_state:
 if "df_new" not in st.session_state:
     st.session_state.df_new = None
 
+
+
 # --- Model Loader ---
 @st.cache_resource
 def model_loader():
@@ -170,6 +173,7 @@ def model_loader():
 embeddings = model_loader()
 
 st.title("Similarity Detector")
+st.warning("Instructions: You cannot refresh the page anytime without losing uploaded files./n 1. Old requirement must have its id , text, verified by features before giving input./n 2. New requirement should have id and text ")
 
 # --- Step 1: Input Section (Parallel File Uploads) ---
 col1, col2 = st.columns(2)
